@@ -23,7 +23,7 @@ export function lowercase(word: string) {
   return word.charAt(0).toLowerCase() + word.substring(1);
 }
 
-export const baseUrl = import.meta.env.PROD ? "0.0.0.0:3000" : ''
+export const baseUrl = import.meta.env.PROD ? "." : ''
 
 export function imgsrc(src: string) {
   const language = localStorage.getItem('language') || 'en'
