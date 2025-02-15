@@ -23,7 +23,7 @@ export function lowercase(word: string) {
   return word.charAt(0).toLowerCase() + word.substring(1);
 }
 
-export const baseUrl = import.meta.env.PROD ? "." : ''
+export const baseUrl = import.meta.env.PROD ? "https://assets.arkhamhorror.app" : ''
 
 export function imgsrc(src: string) {
   const language = localStorage.getItem('language') || 'en'

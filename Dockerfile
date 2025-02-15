@@ -12,7 +12,7 @@ WORKDIR /opt/arkham/src/frontend
 COPY ./frontend/package.json ./frontend/tsconfig.json ./frontend/vite.config.js ./frontend/.eslintrc.cjs ./frontend/package-lock.json /opt/arkham/src/frontend/
 RUN npm ci
 COPY ./frontend /opt/arkham/src/frontend
-ENV VITE_ASSET_HOST ${ASSET_HOST:-""}
+ENV VITE_ASSET_HOST=${ASSET_HOST:-""}
 RUN npm run build
 
 FROM ubuntu:22.04 as base
